@@ -16,7 +16,7 @@ const Services = () => {
                     </div>
                     <div className="section">
                         <h3>SMS Services</h3>
-                        <p>SkritCreations Services Limited offers voice and messaging services to carriers and retail operators Voice Termination During many years the priorities of HGS company have been to provide our partners with a high quality voice termination. Quality is key Point to any outbound or inbound call and agents love having a clear and stable line. Based on this we had creating different routing table as below.</p>
+                        <p>SkritCreations Services Limited offers voice and messaging services to carriers and retail operators Voice Termination During many years the priorities of this company have been to provide our partners with a high quality voice termination. Quality is key Point to any outbound or inbound call and agents love having a clear and stable line. Based on this we had creating different routing table as below.</p>
                     </div>
                 </div>
             </div>
