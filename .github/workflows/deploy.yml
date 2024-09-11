@@ -1,36 +1,43 @@
 name: Deploy to GitHub Pages
 
-# Run workflow when pushing to the master branch
+# Run workflow on push to master
 on:
   push:
     branches:
       - master
 
-# Job for deployment
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    # Checkout the latest code from  the master branch
-    - name: Checkout code
-      uses: actions/checkout@v3
+      # Checkout the latest code from the master branch
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensure the full history is fetched
 
-    - name: Configure Git
-      run: |
-        git config --global user.name "Suyash2711"
-        git config --global user.email "suyashnigam34@gmail.com"
-      # Replace with your actual name and email
+      # Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Specify Node.js version if needed
 
-    # Install dependencies if you are building the site (optional)
-    - name: Install dependencies
-      run: |
-        npm install
-        npm run deploy  # Modify this if using a different build tool
+      # Install dependencies and build the project
+      - name: Install dependencies
+        run: |
+          npm install
+          npm run build  # Adjust this if using a different build command
 
-    # Deploy to GitHub Pages
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist # Change this to the directory where your static site is generated
+      # Configure Git
+      - name: Configure Git
+        run: |
+          git config --global user.name "Suyash2711"
+          git config --global user.email "suyashnigam34@gmail.com"
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the correct GitHub token
+          publish_dir: ./dist  # Ensure this matches your build directory
