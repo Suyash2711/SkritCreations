@@ -6,7 +6,7 @@
 .pnp.js
 
 # User-specific files
-*.vs/
+.vs/
 
 # testing
 /coverage
