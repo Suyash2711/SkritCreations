@@ -16,17 +16,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Install dependencies if you are building the site (optional)
-    - name: Install dependencies
-      run: |
-        npm install
-        npm run deploy  # Modify this if using a different build tool
-
     - name: Configure Git
       run: |
         git config --global user.name "Suyash2711"
         git config --global user.email "suyashnigam34@gmail.com"
       # Replace with your actual name and email
+
+    # Install dependencies if you are building the site (optional)
+    - name: Install dependencies
+      run: |
+        npm install
+        npm run deploy  # Modify this if using a different build tool
 
     # Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
