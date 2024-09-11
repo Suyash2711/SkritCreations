@@ -42,10 +42,6 @@ const ChatBot = () => {
         });
     };
 
-    const toggleChatbot = () => {
-        setIsVisible(!isVisible);
-    };
-
     return (
         <div className={`chatbot-container ${isVisible ? 'visible' : ''}`}>
             <h2>Contact Us</h2>
