@@ -22,6 +22,12 @@ jobs:
         npm install
         npm run deploy  # Modify this if using a different build tool
 
+    - name: Configure Git
+      run: |
+        git config --global user.name "Suyash2711"
+        git config --global user.email "suyashnigam34@gmail.com"
+      # Replace with your actual name and email
+
     # Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
