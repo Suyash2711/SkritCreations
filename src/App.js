@@ -24,7 +24,6 @@ function App() {
     return (
         <div className="App">
             <Header scrollToAbout={scrollToAbout} handleChatbotClick={handleChatbotClick} />
-            <h1>TESTING!!!</h1>
             <About ref={aboutRef} />
             <Services />
             <Contact />

@@ -5,7 +5,6 @@ const About = React.forwardRef((props, ref) => {
     return (
         <section ref={ref} className="about">
             <div className="container">
-                <h2>About Raghav</h2>
                 <div className="sections">
                     <div className="section">
                         <h3>Our Vision</h3>
