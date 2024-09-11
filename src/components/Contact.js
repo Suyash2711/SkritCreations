@@ -16,6 +16,9 @@ const Contact = () => {
                             6 Battery Road, #17‑06
                             Singapore</p>
                         <a href="https://maps.app.goo.gl/CBKqoK444PFe3hEE9" target="_blank" rel="noopener noreferrer">Get Directions</a>
+                        <p>
+                            Email us at: <a href="mailto:info@skritcreation.com">info@skritcreation.com</a>
+                        </p>
                     </div>
                     <div className="map-container">
                         <iframe

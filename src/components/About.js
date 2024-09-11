@@ -17,7 +17,7 @@ const About = React.forwardRef((props, ref) => {
                     </div>
                     <div className="section">
                         <h3>Our Services</h3>
-                        <p>SkritCreations Services Limited offers voice and messaging services to carriers and retail operators Voice Termination During many years the priorities of the company have been to provide our partners with a high quality voice termination. Quality is key Point to any outbound or inbound call and agents love having a clear and stable line. Based on this we had creating different routing table as below. </p>
+                        <p>SkritCreations offers voice and messaging services to carriers and retail operators Voice Termination. For many years, the priorities of skrit creations to provide our partners with high quality voice and sms termination. Quality is key Point to any outbound or inbound call and agents love having a clear and stable line. Based on this we had creating different routing table as below. </p>
                     </div>
                 </div>
             </div>
