@@ -9,7 +9,7 @@ const ChatBot = () => {
         message: ''
     });
 
-    //const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
