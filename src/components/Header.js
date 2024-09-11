@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import './Header.css';
 import chatIcon from  '../Assets/ChatBotIcon.png'
 

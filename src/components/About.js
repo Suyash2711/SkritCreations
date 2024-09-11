@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import './About.css';
 
 const About = React.forwardRef((props, ref) => {
