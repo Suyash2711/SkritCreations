@@ -27,7 +27,9 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npm run build  # Adjust this if using a different build command
+      
+      - name: Build
+        run: npm run build  # Adjust this if your build command is different
 
       # Configure Git
       - name: Configure Git
@@ -40,4 +42,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the correct GitHub token
-          publish_dir: ./build  # Ensure this matches your build directory
+          publish_dir: ./build  # Ensure this matches your build  directory 
