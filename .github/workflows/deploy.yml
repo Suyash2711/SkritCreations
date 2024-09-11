@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+# Run workflow when pushing to the master branch
+on:
+  push:
+    branches:
+      - master
+
+# Job for deployment
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Checkout the latest code from the master branch
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Install dependencies if you are building the site (optional)
+    - name: Install dependencies
+      run: |
+        npm install
+        npm run deploy  # Modify this if using a different build tool
+
+    # Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist # Change this to the directory where your static site is generated
